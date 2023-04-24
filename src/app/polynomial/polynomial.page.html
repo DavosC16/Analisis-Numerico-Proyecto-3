@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Polinomio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <p>{{polynomial}}</p>
+  </ion-card>
+
+  <ion-card>
+    <p>Inserte un nuevo punto del polinomio que desee conocer</p>
+    <ion-input [(ngModel)]="numero" type="number"></ion-input>
+    <ion-button (click)="setNewPoint(numero)">Evaluar</ion-button>
+    <p>f({{numero}})={{newPoint}}</p>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Puntos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>x</ion-col>
+      <ion-col>y</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let point of points; let i=index">
+      <ion-col>
+        <ion-input [(ngModel)]="x[i]"></ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-input [(ngModel)]="y[i]"></ion-input>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <ion-button (click)="Click()">Aceptar</ion-button>
+</ion-content>

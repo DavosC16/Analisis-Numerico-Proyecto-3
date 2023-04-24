@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'points',
+    loadChildren: () => import('./points/points.module').then( m => m.PointsPageModule)
+  },
+  {
+    path: 'polynomial',
+    loadChildren: () => import('./polynomial/polynomial.module').then( m => m.PolynomialPageModule)
+  },
 ];
 
 @NgModule({
